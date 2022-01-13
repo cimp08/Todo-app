@@ -1,1 +1,3 @@
-TEST
+<?php
+require_once '../bootstrap.php';
+
