@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 530px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+}
+
+.add-section,
+.show-section-items {
+  background-color: white;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width: 430px) {
+  .add-section,
+  .show-section-items {
+    margin: 2rem 2rem;
+  }
+}
+
+.add-section {
+  text-align: center;
+}
+
+.add-section-input {
+  width: 80%;
+}
+
+.show-section-items {
+  margin-bottom: 2rem;
+}
+
+.center {
+  padding: 2rem 0;
+  text-align: center;
+  color: #4b4b4b;
+}
+
+@media screen and (max-width: 375px) {
+  .center {
+    padding: 10rem 0;
+  }
+}
+
+.notask {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.add-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+
+  color: #4b4b4b;
+}
+
+.add-plus {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+.task {
+  display: inline-block;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.created {
+  font-weight: 100;
+  border-top: 1px solid black;
+  padding-top: 1rem;
+}
+
+/* -------------------------
+SESSION ALERT 
+-------------------------*/
+
+.alert {
+  padding: 1rem;
+  border-bottom-right-radius: 10px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.blue {
+  background-color: #0099ff;
+}
+
+.grey {
+  background-color: #7e7e7e;
+}
+
+/* -------------------------
+BUTTONS 
+-------------------------*/
+.btn-add,
+.btn-toggle,
+.btn-edit,
+.btn-del,
+.btn-update {
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+}
+
+.btn-add {
+  font-size: inherit;
+  padding: 0.6rem 1rem;
+  background-color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.btn-update {
+  font-size: inherit;
+  padding: 0.6rem 1rem;
+  background-color: #0099ff;
+  border: 1px solid #0099ff;
+}
+
+.btn-toggle {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #7e7e7e;
+  border: 1px solid #7e7e7e;
+}
+
+.btn-edit {
+  float: right;
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #0099ff;
+  border: 1px solid #0099ff;
+}
+
+.btn-del {
+  float: right;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.btn-add:hover,
+.btn-update:hover,
+.btn-toggle:hover,
+.btn-edit:hover,
+.btn-del:hover {
+  background-color: white;
+  color: black;
+}
+
+/* -------------------------
+ICON IMAGE 
+-------------------------*/
+.calendar {
+  font-size: 14rem;
+}

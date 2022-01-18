@@ -1,32 +1,14 @@
 <?php require 'includes/views/header.php'; ?>
 <?php require 'includes/views/navbar.php'; ?>     
     
-    <main>
-      <section class="signup-login">
-        <div>
-          <h4>Sign Up!</h4>
-          <p>Dont have an account? Sign up here!</p>
-          <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
-            <input
-              type="password"
-              name="repeatpassword"
-              placeholder="Repeat Password"
-            />
-            <input type="text" name="email" placeholder="E-mail" />
-            <button type="submit" name="submit">Sign Up</button>
-          </form>
-        </div>
-        <div>
-          <h4>Login</h4>
-          <p>Have an account? Login here!</p>
-          <form action="includes/login.inc.php" method="post">
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
-            <button type="submit" name="submit">Login</button>
-          </form>
-        </div>
-      </section>
-    </main>
+  <div class="container">
+    <div class="p-5 mb-4 mt-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-6 text-uppercase">Welcome <?php if(isset($_SESSION['user_username'])){echo $_SESSION['user_username'];}?>!</h1>
+        <p class="col-md-8 fs-4">This is a application for you to register personal tasks</p>
+      </div>
+    </div>
+  </div>
+
+    
 <?php require 'includes/views/footer.php'; ?>  
