@@ -12,7 +12,7 @@
         <div>
           <h4>Sign Up!</h4>
           <p>Dont have an account? Sign up here!</p>
-          <form action="signup.inc.php" method="post">
+          <form action="includes/signup.inc.php" method="post">
             <input type="text" name="username" placeholder="Username" />
             <input type="password" name="password" placeholder="Password" />
             <input
