@@ -27,7 +27,7 @@
         <div>
           <h4>Login</h4>
           <p>Have an account? Login here!</p>
-          <form action="#" method="post">
+          <form action="includes/login.inc.php" method="post">
             <input type="text" name="username" placeholder="Username" />
             <input type="password" name="password" placeholder="Password" />
             <button type="submit" name="submit">Login</button>
