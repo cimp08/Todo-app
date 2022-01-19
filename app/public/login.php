@@ -7,6 +7,18 @@
     if($_GET['error'] == 'none') {
       echo '<div class="alert alert-success mt-2" role="alert">You are registered, please login!</div>';
     }
+    else if($_GET['error'] == 'emptyinput') {
+      echo '<div class="alert alert-danger mt-2" role="alert">Fill in all fields!</div>';
+    }
+    else if($_GET['error'] == 'stmtfailed') {
+      echo '<div class="alert alert-danger mt-2" role="alert">Something went wrong!</div>';
+    }
+    else if($_GET['error'] == 'usersnotfound') {
+      echo '<div class="alert alert-danger mt-2" role="alert">User not found, try again!</div>';
+    }
+    else if($_GET['error'] == 'wrongpassword') {
+      echo '<div class="alert alert-danger mt-2" role="alert">Wrong password, try again!</div>';
+    }
   }
   ?>
         <h2 class="display-6 mt-4 mb-4">LOGIN</h2>
