@@ -2,6 +2,13 @@
 <?php require 'includes/views/navbar.php'; ?> 
 
 <div class="container">
+  <?php
+  if(isset($_GET['error'])){
+    if($_GET['error'] == 'none') {
+      echo '<div class="alert alert-success mt-2" role="alert">You are registered, please login!</div>';
+    }
+  }
+  ?>
         <h2 class="display-6 mt-4 mb-4">LOGIN</h2>
         <p>Have an account? Login here!</p>
         <form action="includes/login.inc.php" method="post">
@@ -12,7 +19,7 @@
             <div class="mb-3">
                 <input type="password" name="password" class="form-control" placeholder="Password">
             </div>
-            <button type="submit" name="submit" class="btn btn-primary">Login</button>
+            <button type="submit" name="submit" class="btn btn-success">Login</button>
         </form>
     </div>
 
