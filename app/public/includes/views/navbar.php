@@ -10,7 +10,7 @@
               <a class="nav-link active text-uppercase" aria-current="page" href="index.php">home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="todo.php">todos</a>
+              <a class="nav-link text-uppercase" href="includes/todos.inc.php">todos</a>
             </li>
           </ul>
           <div class="d-flex">

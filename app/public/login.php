@@ -19,6 +19,9 @@
     else if($_GET['error'] == 'wrongpassword') {
       echo '<div class="alert alert-danger mt-2" role="alert">Wrong password, try again!</div>';
     }
+    else if($_GET['error'] == 'notloggedin') {
+      echo '<div class="alert alert-danger mt-2" role="alert">Please login</div>';
+    }
   }
   ?>
         <h2 class="display-6 mt-4 mb-4">LOGIN</h2>
@@ -36,13 +39,3 @@
     </div>
 
 <?php require 'includes/views/footer.php'; ?> 
-
-        <!-- <div>
-          <h4>Login</h4>
-          <p>Have an account? Login here!</p>
-          <form action="includes/login.inc.php" method="post">
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
-            <button type="submit" name="submit">Login</button>
-          </form>
-        </div> -->
