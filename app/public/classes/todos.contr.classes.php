@@ -32,7 +32,14 @@ class TodosContr extends Todos{
             ];
         }
         $this->addTodos($data);  
-        
+    }
+
+    public function delete($id){
+        $this->deleteTodos($id);
+    }
+
+    public function mark($as, $id){
+        $this->markTodos($as, $id);
     }
 
 

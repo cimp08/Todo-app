@@ -23,4 +23,32 @@ class Todos extends Dbh {
         $result = $this->connect()->prepare($query);
         $result->execute($data);
     }
+
+    protected function deleteTodos($id) {
+        $query = 'DELETE FROM todos WHERE id = :id';
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
+    protected function markTodos($as, $id) {
+        
+        switch($as) {
+        case 'notcompleted':
+        $stmt = $this->connect()->prepare("UPDATE todos SET completed = 1 WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+
+        $_SESSION['message'] = "Task has been completed";
+        $_SESSION['msg_type'] = "grey";
+        break;
+
+        case 'completed':
+        $stmt = $this->connect()->prepare("UPDATE todos SET completed = 0 WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+
+        $_SESSION['message'] = "Task has set to not done!";
+        $_SESSION['msg_type'] = "grey";
+        break;
+    }
+    }
 }

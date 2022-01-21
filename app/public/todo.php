@@ -31,15 +31,15 @@
             <?php foreach($rows as $row): ?>
                 <li class="show-section-items">
                     <?php if (!$row['completed']):?>
-                    <a class="btn-toggle" href="complete.php?as=notcompleted&id=<?php echo $row['id']?>"><ion-icon name="checkmark-outline"></ion-icon></a>
+                    <a class="btn-toggle" href="includes/todos.inc.php?as=notcompleted&id=<?php echo $row['todosId']?>"><ion-icon name="checkmark-outline"></ion-icon></a>
                     <?php else: ?>
-                    <a class="btn-toggle" href="complete.php?as=completed&id=<?php echo $row['id']?>"><ion-icon name="checkmark-outline"></ion-icon></a>
+                    <a class="btn-toggle" href="includes/todos.inc.php?as=completed&id=<?php echo $row['todosId']?>"><ion-icon name="checkmark-outline"></ion-icon></a>
                     <?php endif;?>
                     <h2 class="task<?php echo $row['completed'] ? ' completed' : '' ?>"><?php echo $row['task'];?></h2>
-                    <a class="btn-edit" href="index.php?edit=<?php echo $row['id']?>"><ion-icon name="create-outline"></ion-icon></a>
-                    <a class="btn-del" href="delete.php?delete=<?php echo $row['id']?>" onclick="return checkDelete()"><ion-icon name="close-outline"></ion-icon></a> 
+                    <a class="btn-edit" href="index.php?edit=<?php echo $row['todosId']?>"><ion-icon name="create-outline"></ion-icon></a>
+                    <a class="btn-del" href="includes/todos.inc.php?delete=<?php echo $row['todosId']?>" onclick="return checkDelete()"><ion-icon name="close-outline"></ion-icon></a> 
                     <p class="created">Created by <?php echo $row['users_username']?> on <?php echo $row['created']?></p>
-                </li> 
+                </li>
             <?php endforeach; ?>
         </ul>
         <?php else: ?>
