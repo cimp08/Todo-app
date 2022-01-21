@@ -16,4 +16,11 @@ class Todos extends Dbh {
         $result->execute();
         return $result;
     }
+
+    protected function addTodos($data) {
+        $query = 'INSERT INTO todos(users_id, task, completed, created) 
+        VALUES (:users_id, :task, :completed, :created)';
+        $result = $this->connect()->prepare($query);
+        $result->execute($data);
+    }
 }
