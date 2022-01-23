@@ -22,6 +22,9 @@ class Todos extends Dbh {
         VALUES (:users_id, :task, :completed, :created)';
         $result = $this->connect()->prepare($query);
         $result->execute($data);
+
+        $_SESSION['message'] = "Task has been saved";
+        $_SESSION['msg_type'] = "success";
     }
 
     protected function deleteTodos($id) {
@@ -29,6 +32,9 @@ class Todos extends Dbh {
         $stmt = $this->connect()->prepare($query);
         $stmt->bindValue(':id', $id);
         $stmt->execute();
+
+        $_SESSION['message'] = "Task has been deleted!";
+        $_SESSION['msg_type'] = "danger";
     }
 
     protected function markTodos($as, $id) {
@@ -39,7 +45,7 @@ class Todos extends Dbh {
         $stmt->execute(['id' => $id]);
 
         $_SESSION['message'] = "Task has been completed";
-        $_SESSION['msg_type'] = "grey";
+        $_SESSION['msg_type'] = "secondary";
         break;
 
         case 'completed':
@@ -47,8 +53,27 @@ class Todos extends Dbh {
         $stmt->execute(['id' => $id]);
 
         $_SESSION['message'] = "Task has set to not done!";
-        $_SESSION['msg_type'] = "grey";
+        $_SESSION['msg_type'] = "secondary";
         break;
+        }
     }
+
+    protected function editTodos($id) {
+        $query = "SELECT * FROM todos WHERE id= :id";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $editTask = $result["task"];
+        return $editTask;
+    }
+
+    protected function updateTodos($data) {
+        $query = 'UPDATE todos SET users_id = :users_id, task = :task, completed = :completed, created = :created WHERE id = :id';
+        $result = $this->connect()->prepare($query);
+        $result->execute($data);
+
+        $_SESSION['message'] = "Task has been updated!";
+        $_SESSION['msg_type'] = "primary";
     }
 }
