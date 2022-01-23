@@ -2,7 +2,7 @@
 
 session_start();
 
-// Instantiate TodosContr class
+// Instantiate TodosContr class ($task = new TodosContr())
 include '../classes/todos.contr.classes.php';
 
 
