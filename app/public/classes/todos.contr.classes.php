@@ -3,14 +3,7 @@
 include 'todos.classes.php';
 
 class TodosContr extends Todos{
-
-    public function __construct(){
-        if(!isset($_SESSION['user_id'])) {
-            header('location: ../index.php');
-        } else {
-            $this->setTodos();
-        }
-    }
+ 
 
     public function setTodos(){
         $result = $this->getTodos();
@@ -42,5 +35,27 @@ class TodosContr extends Todos{
         $this->markTodos($as, $id);
     }
 
+    public function edit($id) {
+        $editTask = $this->editTodos($id);
+        
+        return $editTask;
+    }
 
+    public function update($id, $newTask, $my_date_time) {
+        
+        if(empty($newTask)) {
+            header('location: ../todo.php');
+        } else {
+            $data = [
+            'id' => $id,
+            'users_id' => $_SESSION['user_id'],
+            'task' => $newTask,
+            'completed' => 0,
+            'created' => $my_date_time
+            ];
+        }
+        $this->updateTodos($data);  
+    }
 }
+
+$task = new TodosContr();
