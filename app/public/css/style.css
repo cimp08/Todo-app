@@ -101,105 +101,10 @@ li {
   display: inline-block;
 }
 
-.completed {
-  text-decoration: line-through;
-}
-
 .created {
   font-weight: 100;
   border-top: 1px solid black;
   padding-top: 1rem;
-}
-
-/* -------------------------
-SESSION ALERT 
--------------------------*/
-
-.alert {
-  padding: 1rem;
-  border-bottom-right-radius: 10px;
-  color: white;
-  margin-bottom: 1.5rem;
-}
-
-.green {
-  background-color: #4caf50;
-}
-
-.red {
-  background-color: #ff0000;
-}
-
-.blue {
-  background-color: #0099ff;
-}
-
-.grey {
-  background-color: #7e7e7e;
-}
-
-/* -------------------------
-BUTTONS 
--------------------------*/
-.btn-add,
-.btn-toggle,
-.btn-edit,
-.btn-del,
-.btn-update {
-  color: white;
-  border-radius: 3px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition-duration: 0.4s;
-}
-
-.btn-add {
-  font-size: inherit;
-  padding: 0.6rem 1rem;
-  background-color: #4caf50;
-  border: 1px solid #4caf50;
-}
-
-.btn-update {
-  font-size: inherit;
-  padding: 0.6rem 1rem;
-  background-color: #0099ff;
-  border: 1px solid #0099ff;
-}
-
-.btn-toggle {
-  margin-right: 1rem;
-  font-size: 1.4rem;
-  padding: 0.3rem 0.5rem;
-  background-color: #7e7e7e;
-  border: 1px solid #7e7e7e;
-}
-
-.btn-edit {
-  float: right;
-  font-size: 1.4rem;
-  margin-left: 0.5rem;
-  padding: 0.3rem 0.5rem;
-  background-color: #0099ff;
-  border: 1px solid #0099ff;
-}
-
-.btn-del {
-  float: right;
-  font-size: 1.4rem;
-  padding: 0.3rem 0.5rem;
-  background-color: #ff0000;
-  border: 1px solid #ff0000;
-}
-
-.btn-add:hover,
-.btn-update:hover,
-.btn-toggle:hover,
-.btn-edit:hover,
-.btn-del:hover {
-  background-color: white;
-  color: black;
 }
 
 /* -------------------------

@@ -19,7 +19,7 @@
             required
             >
             <input type="hidden" name="id" value="<?php echo $_GET['edit']; ?>">
-            <button class="btn-update" name="update" type="submit"><ion-icon name="arrow-up-outline"></ion-icon></button>
+            <button class="btn btn-outline-primary btn-lg" name="update" type="submit"><ion-icon name="arrow-up-outline"></ion-icon></button>
         </form>
     </section>
 </main>
