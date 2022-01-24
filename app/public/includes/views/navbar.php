@@ -18,7 +18,7 @@
               <?php
               if(isset($_SESSION['user_username'])): ?>
                 <li class="nav-item">
-                  <a class="nav-link active text-uppercase" href="#"><?php echo $_SESSION['user_username']; ?></a>
+                  <a class="nav-link active text-uppercase" href="index.php"><?php echo $_SESSION['user_username']; ?></a>
                 </li>
                 <li class="nav-item">
                   <a class="btn btn-outline-success text-uppercase" href="includes/logout.inc.php">Logout</a>
