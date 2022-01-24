@@ -14,7 +14,7 @@
 
 <main>
     <section class="add-section">
-        <h1>TO DO LIST!</h1>
+        <h1 class="text-uppercase">Todo list by <?php echo $_SESSION['user_username'];?></h1>
         <form action="includes/todos.inc.php" method="post">
         <input
         id="taskinput"
