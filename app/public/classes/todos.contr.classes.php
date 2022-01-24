@@ -6,7 +6,7 @@ class TodosContr extends Todos{
  
 
     public function setTodos(){
-        $result = $this->getTodos();
+        $result = $this->getTodos($_SESSION['user_id']);
         return $result;
     }
 

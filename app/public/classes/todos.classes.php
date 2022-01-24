@@ -4,15 +4,17 @@ include 'dbh.classes.php';
 
 class Todos extends Dbh {
 
-    protected function getTodos(){
+    protected function getTodos($userid){
         $query = 'SELECT *, 
                     todos.id as todosId,
                     users.id as userId
                     FROM todos
                     INNER JOIN users
-                    ON todos.users_id = users.id
+                    ON todos.users_id = users.id 
+                    WHERE users.id = :userid
                     ORDER BY todos.created DESC';
         $result = $this->connect()->prepare($query);
+        $result->bindValue(':userid', $userid);
         $result->execute();
         return $result;
     }
