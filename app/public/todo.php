@@ -73,7 +73,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Do you want to delete the task: <?php echo $row['task']; ?> ?
+                Do you want to delete the task: <span class="color"><?php echo $row['task']; ?></span> ?
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
