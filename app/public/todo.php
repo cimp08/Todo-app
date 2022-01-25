@@ -54,15 +54,36 @@
                   <a class="btn btn-outline-primary float-end" href="todoupdate.php?edit=<?php echo $row['todosId'] ?>">
                     <ion-icon name="create-outline"></ion-icon>
                   </a>
-                  <a href="includes/todos.inc.php?delete=<?php echo $row['todosId'] ?>" class="btn btn-outline-danger float-end me-1" onclick="return checkDelete()">
+                  <button type="button" class="btn btn-outline-danger float-end me-1" data-bs-toggle="modal" data-bs-target="#deleteModal-<?php echo $row['todosId'] ?>">
                     <ion-icon name="close-outline"></ion-icon>
-                  </a>
+                  </button>
                   <p class="created">Created by <?php echo $row['users_username'] ?> on <?php echo $row['created'] ?></p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+
+        <!-- Delete Modal -->
+        <div class="modal fade" id="deleteModal-<?php echo $row['todosId'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Deleting</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Do you want to delete the task: <?php echo $row['task']; ?> ?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="includes/todos.inc.php?delete=<?php echo $row['todosId'] ?>" type="button" class="btn btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Delete Modal -->
+
       <?php endforeach; ?>
     <?php else : ?>
       <div class="row">
