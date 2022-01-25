@@ -3,24 +3,31 @@
 <?php include 'classes/todos.contr.classes.php'; ?>
 
 <main>
-    <section class="add-section">
-        <h1>UPDATE TASK!</h1>
+    <section>
+        <div class="row text-center">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body bg-light mt-5">
+                    <h1>UPDATE TASK!</h1>
     
-  <?php $editTask = $task->edit($_GET['edit']);?>
+                        <?php $editTask = $task->edit($_GET['edit']);?>
 
-        <form action="includes/todos.inc.php" method="post">
-            <input 
-            class="add-section-input"
-            type="text" 
-            name="task" 
-            placeholder="Enter a task"
-            value="<?php echo $editTask; ?>"
-            autocomplete="off"
-            required
-            >
-            <input type="hidden" name="id" value="<?php echo $_GET['edit']; ?>">
-            <button class="btn btn-outline-primary btn-lg" name="update" type="submit"><ion-icon name="arrow-up-outline"></ion-icon></button>
-        </form>
+                    <form action="includes/todos.inc.php" method="post">
+                        <div class="input-group mb-3">
+                            <input 
+                            class="form-control"
+                            type="text" 
+                            name="task" 
+                            placeholder="Enter a task"
+                            value="<?php echo $editTask; ?>"
+                            autocomplete="off"
+                            required>
+                            <input type="hidden" name="id" value="<?php echo $_GET['edit']; ?>">
+                            <button class="btn btn-outline-primary btn-lg" name="update" type="submit"><ion-icon name="arrow-up-outline"></ion-icon></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
