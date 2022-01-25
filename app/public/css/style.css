@@ -8,89 +8,10 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (max-width: 530px) {
-  html {
-    font-size: 50%;
-  }
-}
-
 body {
   background-color: #eeeeee;
   font-family: "Lato", sans-serif;
   font-size: 2rem;
-}
-
-.add-section,
-.show-section-items {
-  background-color: white;
-  max-width: 50rem;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 3px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-@media screen and (max-width: 430px) {
-  .add-section,
-  .show-section-items {
-    margin: 2rem 2rem;
-  }
-}
-
-.add-section {
-  text-align: center;
-}
-
-.add-section-input {
-  width: 80%;
-}
-
-.show-section-items {
-  margin-bottom: 2rem;
-}
-
-.center {
-  padding: 2rem 0;
-  text-align: center;
-  color: #4b4b4b;
-}
-
-@media screen and (max-width: 375px) {
-  .center {
-    padding: 10rem 0;
-  }
-}
-
-.notask {
-  text-transform: uppercase;
-  margin: 1rem 0;
-}
-
-.add-link {
-  font-size: 1.6rem;
-  text-decoration: none;
-
-  color: #4b4b4b;
-}
-
-.add-plus {
-  font-weight: bold;
-  color: #4caf50;
-}
-
-h1 {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.3rem;
-}
-
-input {
-  font-family: inherit;
-  font-size: inherit;
-  padding: 0.5rem 1rem;
 }
 
 li {
@@ -98,13 +19,27 @@ li {
 }
 
 .task {
+  font-size: 2rem;
   display: inline-block;
 }
 
+@media screen and (max-width: 770px) {
+  .task {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .row {
+    padding: 0 0.5rem;
+  }
+}
+
 .created {
+  font-size: 1.6rem;
   font-weight: 100;
   border-top: 1px solid black;
   padding-top: 1rem;
+  margin: 0;
 }
 
 /* -------------------------
