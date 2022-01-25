@@ -1,9 +1,9 @@
 <?php
 
 if(isset($_POST['submit'])) {
-    // Takes data from sign up form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    // Init data and sanitize
+    $username = trim(filter_input(INPUT_POST, "username", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $password = trim(filter_input(INPUT_POST, "password", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
   
     // Instantiate SignupContr class
     include '../classes/dbh.classes.php';
@@ -11,9 +11,9 @@ if(isset($_POST['submit'])) {
     include '../classes/login.contr.classes.php';
     $login = new LoginContr($username, $password);
     
-    // Running error handlers and user signup
+    // Running error handlers and user login
     $login->loginUser();
 
     // Head to todo page
-    header('location: ../todo.php?error=none');
+    header('location: ../todo.php');
 }
