@@ -13,17 +13,17 @@ class Todos extends Dbh {
                     ON todos.users_id = users.id 
                     WHERE users.id = :userid
                     ORDER BY todos.created DESC';
-        $result = $this->connect()->prepare($query);
-        $result->bindValue(':userid', $userid);
-        $result->execute();
-        return $result;
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindValue(':userid', $userid);
+        $stmt->execute();
+        return $stmt;
     }
 
     protected function addTodos($data) {
         $query = 'INSERT INTO todos(users_id, task, completed, created) 
         VALUES (:users_id, :task, :completed, :created)';
-        $result = $this->connect()->prepare($query);
-        $result->execute($data);
+        $stmt = $this->connect()->prepare($query);
+        $stmt->execute($data);
 
         $_SESSION['message'] = "Task has been saved";
         $_SESSION['msg_type'] = "success";
@@ -72,8 +72,8 @@ class Todos extends Dbh {
 
     protected function updateTodos($data) {
         $query = 'UPDATE todos SET users_id = :users_id, task = :task, completed = :completed, created = :created WHERE id = :id';
-        $result = $this->connect()->prepare($query);
-        $result->execute($data);
+        $stmt = $this->connect()->prepare($query);
+        $stmt->execute($data);
 
         $_SESSION['message'] = "Task has been updated!";
         $_SESSION['msg_type'] = "primary";
