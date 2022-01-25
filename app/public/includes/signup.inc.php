@@ -1,11 +1,13 @@
 <?php
 
 if(isset($_POST['submit'])) {
-    // Takes data from sign up form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $repeatPassword = $_POST['repeatpassword'];
-    $email = $_POST['email'];
+   
+    // Init data and sanitize
+    $username = trim(filter_input(INPUT_POST, "username", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $password = trim(filter_input(INPUT_POST, "password", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $repeatPassword = trim(filter_input(INPUT_POST, "repeatpassword", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $email = trim(filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL));
+    
 
     // Instantiate SignupContr class
     include '../classes/dbh.classes.php';
