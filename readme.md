@@ -37,3 +37,10 @@ An individual task where you have to create a web project which is a to-do list 
 - Login as a user
 - Create, read, update, delete and mark tasks as completed or not completed
 - Logout as a user
+  <br><br>
+
+---
+
+### Author
+
+**Cemil Ülay**
