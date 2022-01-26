@@ -38,6 +38,7 @@ An individual task where you have to create a web project which is a to-do list 
   | Database |   mvc    |
 
 - Import `mvc.sql` in adminer to access the database
+- Navigate to http://127.0.0.1/ in your browser to access the landing page
   <br><br>
 
 ---
