@@ -1,22 +1,5 @@
 # Project u04 Todo
 
-## Setup
-
-- Install [Docker Desktop](https://www.docker.com/get-started).
-- cd into folder and run "docker-compose up" in shell
-- Navigate to adminer in your browser "localhost:8080"
-
-  | Adminer  |  Setups  |
-  | -------- | :------: |
-  | System   |  MySQL   |
-  | Server   |  mysql   |
-  | Username |   user   |
-  | Password | password |
-  | Database |   mvc    |
-
-- Import `mvc.sql` in adminer to access the database
-  <br><br>
-
 ## The Project
 
 An individual task where you have to create a web project which is a to-do list where the list is saved and loaded from a database.
@@ -37,6 +20,24 @@ An individual task where you have to create a web project which is a to-do list 
 - Login as a user
 - Create, read, update, delete and mark tasks as completed or not completed
 - Logout as a user
+  <br><br>
+
+## Setup
+
+- Install [Docker Desktop](https://www.docker.com/get-started).
+- cd into folder and run "docker-compose up" in shell
+- Navigate to adminer in your browser "localhost:8080"
+- Login to Adminer
+
+  | Adminer  |  Setups  |
+  | -------- | :------: |
+  | System   |  MySQL   |
+  | Server   |  mysql   |
+  | Username |   user   |
+  | Password | password |
+  | Database |   mvc    |
+
+- Import `mvc.sql` in adminer to access the database
   <br><br>
 
 ---
