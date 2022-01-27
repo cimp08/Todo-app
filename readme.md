@@ -2,7 +2,7 @@
 
 **[Project URL]** (https://chas-todo-app.herokuapp.com/)
 
-** Don´t register an account with a sensitive password or your correct email adress. You will be able to log in with the registered username
+** Don´t register an account with a sensitive password or your correct email adress. You will be able to log in with the registered username **
 
 ---------------------------------
 
