@@ -1,4 +1,4 @@
-# Project u04 Todo
+# Project Todo Application
 
 **[Project URL]** (https://chas-todo-app.herokuapp.com/)
 
